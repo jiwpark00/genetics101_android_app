@@ -1,0 +1,71 @@
+<!-- Modified from Udacity's Just Java app -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Title for the application. [CHAR LIMIT=12] -->
+    <string name="app_name">Genetics101</string>
+
+    <!-- Hint text display in the empty field for the user's name [CHAR LIMIT=20] -->
+    <string name="name">Test-Taker Name</string>
+
+    <!-- Hint text display in the empty field for the question 1 [CHAR LIMIT=20] -->
+    <string name="question1">Question 1:\nTP53 is a tumor suppressor.</string>
+
+    <!-- Hint text display in the empty field for the choice for question 1 [CHAR LIMIT=20] -->
+    <string name="box1">True</string>
+
+    <!-- Hint text display in the empty field for the question 2 [CHAR LIMIT=20] -->
+    <string name="question2">Question 2:\nAnti-aging therapies have risks for tumorigenesis.</string>
+
+    <!-- Hint text display in the empty field for the choice for question 2 [CHAR LIMIT=20] -->
+    <string name="box2">True</string>
+
+    <!-- Hint text display in the empty field for the question 3 [CHAR LIMIT=20] -->
+    <string name="question3">Question 3:\nCRISPR mainly works on the RNA level, as in shRNA.</string>
+
+    <!-- Hint text display in the empty field for the choice for question 3 [CHAR LIMIT=20] -->
+    <string name="box3">True</string>
+
+    <!-- Hint text display in the empty field for the question 4 [CHAR LIMIT=20] -->
+    <string name="question4">Question 4:\nPhospho-proteomics has been a hot field because kinase inhibitors make great drugs.</string>
+
+    <!-- Hint text display in the empty field for the choice for question 4 [CHAR LIMIT=20] -->
+    <string name="box4">True</string>
+
+    <!-- Hint text display in the empty field for the question 5 [CHAR LIMIT=20] -->
+    <string name="question5">Question 5:\nIt is possible to PCR amplify proteins. </string>
+
+    <!-- Hint text display in the empty field for the choice for question 5 [CHAR LIMIT=20] -->
+    <string name="box5">True</string>
+
+    <string name="answer">Answer</string>
+
+    <string name="reset">Reset</string>
+
+
+    <!--
+      Report for the student
+    -->
+    <string name="test_summary_name">Name: <xliff:g id="name" example="David">%s</xliff:g></string>
+
+    <!--
+      Reports whether the each question is correct
+    -->
+    <string name="test_summary_question1">First question correct? <xliff:g id="addQuestion1" example="true">%b</xliff:g></string>
+    <string name="test_summary_question2">Second question correct? <xliff:g id="addQuestion2" example="true">%b</xliff:g></string>
+    <string name="test_summary_question3">Third question correct? <xliff:g id="addQuestion3" example="true">%b</xliff:g></string>
+    <string name="test_summary_question4">Fourth question correct? <xliff:g id="addQuestion4" example="true">%b</xliff:g></string>
+    <string name="test_summary_question5">Fifth question correct? <xliff:g id="addQuestion5" example="true">%b</xliff:g></string>
+    <!--
+      Reports the number of questions correct
+    -->
+    <string name="test_summary_correct">Number of questions correct <xliff:g id="quantity" example="2">%d</xliff:g></string>
+
+    <!--
+      Reports the final points.
+    -->
+    <string name="test_summary_score">Total points: <xliff:g id="point" example="10">%d</xliff:g></string>
+
+    <!-- Thank you message for the taking the quiz. [CHAR LIMIT=NONE] -->
+    <string name="thank_you">Thank you for taking this quiz!</string>
+
+</resources>
