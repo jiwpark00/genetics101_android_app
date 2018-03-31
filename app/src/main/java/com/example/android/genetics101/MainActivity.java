@@ -55,11 +55,22 @@ public class MainActivity extends AppCompatActivity {
         RadioButton question5RadioButton = (RadioButton) findViewById(R.id.question5_radioButton);
         boolean question5Correct = question5RadioButton.isChecked();
 
+        CheckBox question6CheckBox1 = (CheckBox) findViewById(R.id.question6_checkbox1);
+        CheckBox question6CheckBox2 = (CheckBox) findViewById(R.id.question6_checkbox2);
+        CheckBox question6CheckBox3 = (CheckBox) findViewById(R.id.question6_checkbox3);
+        CheckBox question6CheckBox4 = (CheckBox) findViewById(R.id.question6_checkbox4);
+        boolean question6Correct1 = question6CheckBox1.isChecked();
+        boolean question6Correct2 = question6CheckBox2.isChecked();
+        boolean question6Correct3 = question6CheckBox3.isChecked();
+        boolean question6Correct4 = question6CheckBox4.isChecked();
+
         // Calculate the points
-        int point = calculatePrice(question1Correct, question2Correct, question3Correct, question4Correct, question5Correct);
+        int point = calculatePrice(question1Correct, question2Correct, question3Correct, question4Correct, question5Correct, question6Correct1,
+                question6Correct2,question6Correct3,question6Correct4);
 
         // Display the summary on the screen
-        String message = createTestSummary(name, point, question1Correct, question2Correct, question3Correct, question4Correct, question5Correct);
+        String message = createTestSummary(name, point, question1Correct, question2Correct, question3Correct, question4Correct, question5Correct,
+                question6Correct1,question6Correct2,question6Correct3,question6Correct4);
 
        displayMessage(message);
 
@@ -76,9 +87,11 @@ public class MainActivity extends AppCompatActivity {
      * @param addQuestion3    is whether or not the third question is answered correct
      * @param addQuestion4    is whether or not the fourth question is answered correct
      * @param addQuestion5    is whether or not the fifth question is answered correct
+     * @param addQuestion6_1, addQuestion6_2, addQuestion6_3, addQuestion6_4    is whether or not the fifth question is answered correct
      * @return total point [score is the initial; point is what's finally returned]
      */
-    private int calculatePrice(boolean addQuestion1, boolean addQuestion2, boolean addQuestion3, boolean addQuestion4, boolean addQuestion5) {
+    private int calculatePrice(boolean addQuestion1, boolean addQuestion2, boolean addQuestion3, boolean addQuestion4, boolean addQuestion5,
+                               boolean addQuestion6_1, boolean addQuestion6_2, boolean addQuestion6_3, boolean addQuestion6_4) {
 
         // Increments by one point
         if (addQuestion1) {
@@ -101,6 +114,11 @@ public class MainActivity extends AppCompatActivity {
             correct_questions = correct_questions + 1;
         }
 
+        if (addQuestion6_1 && addQuestion6_2 && !addQuestion6_3 && addQuestion6_4) {
+            correct_questions = correct_questions + 1;
+        }
+
+
         // Calculate the total points; each question is worth 2 points
         return score + correct_questions*2;
     }
@@ -113,13 +131,26 @@ public class MainActivity extends AppCompatActivity {
      * @return text summary
      */
     private String createTestSummary(String name, int point,
-                                      boolean addQuestion1, boolean addQuestion2, boolean addQuestion3, boolean addQuestion4, boolean addQuestion5) {
+                                      boolean addQuestion1, boolean addQuestion2, boolean addQuestion3, boolean addQuestion4, boolean addQuestion5,
+                                     boolean addQuestion6_1, boolean addQuestion6_2, boolean addQuestion6_3, boolean addQuestion6_4) {
         String testMessage = getString(R.string.test_summary_name, name);
         testMessage += "\n" + getString(R.string.test_summary_question1, addQuestion1);
         testMessage += "\n" + getString(R.string.test_summary_question2, addQuestion2);
         testMessage += "\n" + getString(R.string.test_summary_question3, !addQuestion3);
         testMessage += "\n" + getString(R.string.test_summary_question4, addQuestion4);
         testMessage += "\n" + getString(R.string.test_summary_question5, !addQuestion5);
+
+        boolean addQuestion6;
+
+        if (addQuestion6_1 && addQuestion6_2 && !addQuestion6_3 && addQuestion6_4) {
+            addQuestion6 = true;
+        }
+
+        else {
+            addQuestion6 = false;
+        }
+
+        testMessage += "\n" + getString(R.string.test_summary_question6, addQuestion6);
         testMessage += "\n" + getString(R.string.test_summary_correct, correct_questions);
         testMessage += "\n" + getString(R.string.test_summary_score, point);
         testMessage += "\n" + getString(R.string.thank_you);
@@ -147,6 +178,11 @@ public class MainActivity extends AppCompatActivity {
         RadioButton question4RadioButton = (RadioButton) findViewById(R.id.question4_radioButton);
         RadioButton question5RadioButton = (RadioButton) findViewById(R.id.question5_radioButton);
 
+        CheckBox question6CheckBox1 = (CheckBox) findViewById(R.id.question6_checkbox1);
+        CheckBox question6CheckBox2 = (CheckBox) findViewById(R.id.question6_checkbox2);
+        CheckBox question6CheckBox3 = (CheckBox) findViewById(R.id.question6_checkbox3);
+        CheckBox question6CheckBox4 = (CheckBox) findViewById(R.id.question6_checkbox4);
+
         if (question1RadioButton.isChecked()) {
             question1RadioButton.setChecked(false);
         }
@@ -161,6 +197,22 @@ public class MainActivity extends AppCompatActivity {
         }
         if (question5RadioButton.isChecked()) {
             question5RadioButton.setChecked(false);
+        }
+
+        if (question6CheckBox1.isChecked()) {
+            question6CheckBox1.setChecked(false);
+        }
+
+        if (question6CheckBox2.isChecked()) {
+            question6CheckBox2.setChecked(false);
+        }
+
+        if (question6CheckBox3.isChecked()) {
+            question6CheckBox3.setChecked(false);
+        }
+
+        if (question6CheckBox4.isChecked()) {
+            question6CheckBox4.setChecked(false);
         }
 
             String message = "Your answers are reset. Try again. All checkboxes are unchecked now";
