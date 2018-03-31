@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
             question6CheckBox4.setChecked(false);
         }
 
-            String message = "Your answers are reset. Try again. All checkboxes are unchecked now";
+        String message = getString(R.string.reset_msg);
         displayMessage(message);
     }
 }

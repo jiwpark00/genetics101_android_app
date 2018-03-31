@@ -84,4 +84,6 @@
     <!-- Thank you message for the taking the quiz. [CHAR LIMIT=NONE] -->
     <string name="thank_you">Thank you for taking this quiz!</string>
 
+    <string name="reset_msg">Your answers are reset. Try again. All checkboxes are unchecked now</string>
+
 </resources>
