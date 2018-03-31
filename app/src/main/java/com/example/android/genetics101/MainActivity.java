@@ -10,6 +10,7 @@ import android.text.Editable;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -39,20 +40,20 @@ public class MainActivity extends AppCompatActivity {
         String name = nameEditable.toString();
 
         // Checkboxes
-        CheckBox question1CheckBox = (CheckBox) findViewById(R.id.question1_checkbox);
-        boolean question1Correct = question1CheckBox.isChecked();
+        RadioButton question1RadioButton = (RadioButton) findViewById(R.id.question1_radioButton);
+        boolean question1Correct = question1RadioButton.isChecked();
 
-        CheckBox question2CheckBox = (CheckBox) findViewById(R.id.question2_checkbox);
-        boolean question2Correct = question2CheckBox.isChecked();
+        RadioButton question2RadioButton = (RadioButton) findViewById(R.id.question2_radioButton);
+        boolean question2Correct = question2RadioButton.isChecked();
 
-        CheckBox question3CheckBox = (CheckBox) findViewById(R.id.question3_checkbox);
-        boolean question3Correct = question3CheckBox.isChecked();
+        RadioButton question3RadioButton = (RadioButton) findViewById(R.id.question3_radioButton);
+        boolean question3Correct = question3RadioButton.isChecked();
 
-        CheckBox question4CheckBox = (CheckBox) findViewById(R.id.question4_checkbox);
-        boolean question4Correct = question4CheckBox.isChecked();
+        RadioButton question4RadioButton = (RadioButton) findViewById(R.id.question4_radioButton);
+        boolean question4Correct = question4RadioButton.isChecked();
 
-        CheckBox question5CheckBox = (CheckBox) findViewById(R.id.question5_checkbox);
-        boolean question5Correct = question5CheckBox.isChecked();
+        RadioButton question5RadioButton = (RadioButton) findViewById(R.id.question5_radioButton);
+        boolean question5Correct = question5RadioButton.isChecked();
 
         // Calculate the points
         int point = calculatePrice(question1Correct, question2Correct, question3Correct, question4Correct, question5Correct);
@@ -140,26 +141,26 @@ public class MainActivity extends AppCompatActivity {
 
         EditText nameField = (EditText) findViewById(R.id.name_field);
         nameField.setText(null);
-        CheckBox question1CheckBox = (CheckBox) findViewById(R.id.question1_checkbox);
-        CheckBox question2CheckBox = (CheckBox) findViewById(R.id.question2_checkbox);
-        CheckBox question3CheckBox = (CheckBox) findViewById(R.id.question3_checkbox);
-        CheckBox question4CheckBox = (CheckBox) findViewById(R.id.question4_checkbox);
-        CheckBox question5CheckBox = (CheckBox) findViewById(R.id.question5_checkbox);
+        RadioButton question1RadioButton = (RadioButton) findViewById(R.id.question1_radioButton);
+        RadioButton question2RadioButton = (RadioButton) findViewById(R.id.question2_radioButton);
+        RadioButton question3RadioButton = (RadioButton) findViewById(R.id.question3_radioButton);
+        RadioButton question4RadioButton = (RadioButton) findViewById(R.id.question4_radioButton);
+        RadioButton question5RadioButton = (RadioButton) findViewById(R.id.question5_radioButton);
 
-        if (question1CheckBox.isChecked()) {
-            question1CheckBox.setChecked(false);
+        if (question1RadioButton.isChecked()) {
+            question1RadioButton.setChecked(false);
         }
-        if (question2CheckBox.isChecked()) {
-            question2CheckBox.setChecked(false);
+        if (question2RadioButton.isChecked()) {
+            question2RadioButton.setChecked(false);
         }
-        if (question3CheckBox.isChecked()) {
-            question3CheckBox.setChecked(false);
+        if (question3RadioButton.isChecked()) {
+            question3RadioButton.setChecked(false);
         }
-        if (question4CheckBox.isChecked()) {
-            question4CheckBox.setChecked(false);
+        if (question4RadioButton.isChecked()) {
+            question4RadioButton.setChecked(false);
         }
-        if (question5CheckBox.isChecked()) {
-            question5CheckBox.setChecked(false);
+        if (question5RadioButton.isChecked()) {
+            question5RadioButton.setChecked(false);
         }
 
             String message = "Your answers are reset. Try again. All checkboxes are unchecked now";

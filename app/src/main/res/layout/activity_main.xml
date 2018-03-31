@@ -26,8 +26,8 @@
             style="@style/HeaderTextStyle"
             android:text="@string/question1" />
 
-        <CheckBox
-            android:id="@+id/question1_checkbox"
+        <RadioButton
+            android:id="@+id/question1_radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
@@ -38,8 +38,8 @@
             style="@style/HeaderTextStyle"
             android:text="@string/question2" />
 
-        <CheckBox
-            android:id="@+id/question2_checkbox"
+        <RadioButton
+            android:id="@+id/question2_radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
@@ -50,8 +50,8 @@
             style="@style/HeaderTextStyle"
             android:text="@string/question3" />
 
-        <CheckBox
-            android:id="@+id/question3_checkbox"
+        <RadioButton
+            android:id="@+id/question3_radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
@@ -63,8 +63,8 @@
             android:layout_height="87dp"
             android:text="@string/question4" />
 
-        <CheckBox
-            android:id="@+id/question4_checkbox"
+        <RadioButton
+            android:id="@+id/question4_radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
@@ -75,8 +75,8 @@
             style="@style/HeaderTextStyle"
             android:text="@string/question5" />
 
-        <CheckBox
-            android:id="@+id/question5_checkbox"
+        <RadioButton
+            android:id="@+id/question5_radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
